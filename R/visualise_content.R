@@ -67,12 +67,12 @@ render_exercises <- function(ejercicio, resuelto = FALSE){
   dir <- file.path(dir, "doc")
   
   # Setting the lecture names
-  exercises <- paste0("Ejercicio_practico", 1:3)
+  exercises <- paste0("Ejercicio_practico", c(1.1, 1.2, 2, 3))
   
   # Checking if the name corresponds to the existing lectures
   if(!ejercicio %in% exercises)
     stop("Por favor indique el nombre del ejercicio:
-          'Ejercicio_practico1', 'Ejercicio_practico2', or 'Ejercicio_practico3'")
+          'Ejercicio_practico1.1', 'Ejercicio_practico1.2', 'Ejercicio_practico2', or 'Ejercicio_practico3'")
   
   # Checking if the parameter resuelto is logical
   if(!is.logical(resuelto))
@@ -83,12 +83,12 @@ render_exercises <- function(ejercicio, resuelto = FALSE){
     stop("Aun no puedes acceder a las soluciones! Espera hasta el segundo taller :)")
   
   # Extracting number
-  nbr <- substr(ejercicio, nchar(ejercicio), nchar(ejercicio))
+  nbr <- substr(ejercicio, 19, nchar(ejercicio))
   
   if(resuelto){
-    browseURL(file.path(dir, paste0("Ejercicio_practico", nbr, "_resuelto.html")))
+    browseURL(file.path(dir, paste0("Ejercicio", nbr, "_resuelto.html")))
   } else {
-    browseURL(file.path(dir, paste0("Ejercicio_practico", nbr, ".html")))
+    browseURL(file.path(dir, paste0("Ejercicio", nbr, ".html")))
   } 
   
 } # end render_exercises
