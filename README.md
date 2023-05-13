@@ -1,4 +1,4 @@
-# rNBI  <img src="./inst/logo/SISSA_Courses.png" align="right" width="150" />
+# rSISSA <img src="./inst/logo/SISSA_Courses.png" align="right" width="150" />
 
 > Este paquete contiene las diapositivas y ejercicios utilizados en el Taller de fusi ́on de datos satelitales con estaciones - SISSA:
 
