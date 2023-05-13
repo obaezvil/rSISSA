@@ -24,7 +24,7 @@ render_lectures <- function(modulo){
   lectures <- c("Intro", paste0("Modulo", 1:5))
   
   # Checking if the name corresponds to the existing lectures
-  if(!lecture %in% lectures)
+  if(!modulo %in% lectures)
     stop("Por favor indique el nombre del módulo: 
           'Intro' : Introducción al curso
           'Modulo1' : Introducción a R - Parte 1
@@ -76,7 +76,11 @@ render_exercises <- function(ejercicio, resuelto = FALSE){
   
   # Checking if the parameter resuelto is logical
   if(!is.logical(resuelto))
-    stop("The parameter 'resuelto' must be either TRUE or FALSE")
+    stop("El parámetro 'resuelto' debe de ser TRUE o FALSE")
+  
+  ### STOP resuelto from executing for now
+  if(resuelto)
+    stop("Aun no puedes acceder a las soluciones! Espera hasta el segundo taller :)")
   
   # Extracting number
   nbr <- substr(ejercicio, nchar(ejercicio), nchar(ejercicio))
