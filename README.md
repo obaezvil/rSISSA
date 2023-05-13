@@ -1,48 +1,44 @@
-# rNBI  <img src="./inst/logo/rNBI_Training.png" align="right" width="150" />
+# rNBI  <img src="./inst/logo/SISSA_Courses.png" align="right" width="150" />
 
-> This package contains the lectures and exercises used in the course **Spatial data analysis with R - NBI**:
+> Este paquete contiene las diapositivas y ejercicios utilizados en el Taller de fusi ́on de datos satelitales con estaciones - SISSA:
 
-- 1.  Introduction to R - Part 1
+- 1.  Introducción al curso
 
-- 2.  Introduction to R - Part 2
+- 2.  Introducción a R - Parte 1
 
-- 3.  Raster files and spatial data
+- 3.  Introducción a R - Parte 2
 
-- 4.  Data processing
+- 4.  Rásters y datos espaciales
 
-- 5.  Spatial and temporal statistics
+- 5.  Procesamiento de datos
 
-- 6.  Automating downloading
-
-- 7.  Functions and parallel computation
-
-- 8.  Advanced spatial and temporal statistics
+- 6.  Estadísticas espaciales y temporales
 
 
-### Installation and usage
+### Instalación y uso
 
-Make sure that devtools are installed:
+Asegúrese de que el paquete **remotes** esté instalado:
 ```r
 install.packages("remotes")
 ```
-Install the rNBI package from GitHub :
+Instale el paquete **rSISSA** desde GitHub:
 ```r
-remotes::install_github("obaezvil/rNBI")
+remotes::install_github("obaezvil/rSISSA")
 ```
-Load the package:
+Cargue el paquete:
 ```r
-library(rNBI)
+library(rSISSA)
 ```
-Open the first lecture:
+Abra el primer módulo:
 ```r
-render_lectures("Lecture1") 
+render_lectures("Intro") 
 ```
 
-In case that the download failed with the following error: *Error in utils::download.file*, you can try to increase the timeout for the downloads as follows and try again.
+En caso de que la descarga falle con el siguiente error: **Error in utils::download.file**, puede intentar aumentar el tiempo de espera para las descargas de la siguiente manera y volver a intentarlo.
 ```r
 options(timeout=500) 
-remotes::install_github("obaezvil/rNBI")
+remotes::install_github("obaezvil/rSISSA")
 ```
 
-The link to the data is as follows:
-[https://th-koeln.sciebo.de/s/67HCqQCdH907Wgp](https://th-koeln.sciebo.de/s/67HCqQCdH907Wgp)
+El enlace a los datos es el siguiente:
+[https://th-koeln.sciebo.de/s/67HCqQCdH907Wgp](https://th-koeln.sciebo.de/s/Yq1r35VB0z5sZuc)
