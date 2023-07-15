@@ -78,10 +78,6 @@ render_exercises <- function(ejercicio, resuelto = FALSE){
   if(!is.logical(resuelto))
     stop("El parámetro 'resuelto' debe de ser TRUE o FALSE")
   
-  ### STOP resuelto from executing for now
-  if(resuelto)
-    stop("Aun no puedes acceder a las soluciones! Espera hasta el segundo taller :)")
-  
   # Extracting number
   nbr <- substr(ejercicio, 19, nchar(ejercicio))
   
