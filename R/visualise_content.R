@@ -8,6 +8,12 @@
 #'   \item{'Modulo3': }{Rásters y datos espaciales}
 #'   \item{'Modulo4': }{Procesamiento de datos}
 #'   \item{'Modulo5': }{Estadísticas espaciales y temporales}
+#'   \item{'Modulo6': }{Evaluación de productos de precipitación}
+#'   \item{'Modulo7': }{Introducción a machine learning - I}
+#'   \item{'Modulo8': }{Introducción a machine learning - II}
+#'   \item{'Modulo9': }{Fusión de productos de precipitación}
+#'   \item{'Modulo10': }{Funciones y cómputo en paralelo}
+#'   \item{'Modulo11': }{Trabajando con RMarkdown y Leaflet}
 #'}
 #'
 #' @return esta función lleva al usiario al módulo seleccionado.
@@ -21,7 +27,7 @@ render_lectures <- function(modulo){
   dir <- file.path(dir, "doc")
   
   # Setting the lecture names
-  lectures <- c("Intro", paste0("Modulo", 1:5))
+  lectures <- c("Intro", paste0("Modulo", 1:11))
   
   # Checking if the name corresponds to the existing lectures
   if(!modulo %in% lectures)
@@ -31,7 +37,13 @@ render_lectures <- function(modulo){
           'Modulo2' : Introducción a R - Parte 2
           'Modulo3' : Rásters y datos espaciales
           'Modulo4' : Procesamiento de datos
-          'Modulo5' : Estadísticas espaciales y temporales")
+          'Modulo5' : Estadísticas espaciales y temporales
+          'Modulo6': Evaluación de productos de precipitación
+          'Modulo7': Introducción a machine learning - I
+          'Modulo8': Introducción a machine learning - II
+          'Modulo9': Fusión de productos de precipitación
+          'Modulo10': Funciones y cómputo en paralelo
+          'Modulo11': Trabajando con RMarkdown y Leaflet")
   
   if(modulo == "Intro"){
     browseURL(file.path(dir, "Modulo0_Introduccion.html"))
@@ -45,6 +57,18 @@ render_lectures <- function(modulo){
     browseURL(file.path(dir, "Modulo4_Procesamiento_de_Datos.html"))
   } else if (modulo == "Modulo5"){
     browseURL(file.path(dir, "Modulo5_Estadisticas_espaciales_y_temporales.html"))
+  } else if (modulo == "Modulo6"){
+    browseURL(file.path(dir, "Modulo6_Evaluacion_Productos_P.html"))
+  } else if (modulo == "Modulo7"){
+    browseURL(file.path(dir, "Modulo7_Introduccion_a_Machine_Learning_I.html"))
+  } else if (modulo == "Modulo8"){
+    browseURL(file.path(dir, "Modulo8_Introduccion_a_Machine_Learning_II.html"))
+  } else if (modulo == "Modulo9"){
+    browseURL(file.path(dir, "Modulo9_Fusion_de_Productos_de_Precipitacion.html"))
+  } else if (modulo == "Modulo10"){
+    browseURL(file.path(dir, "Modulo10_Funciones_y_Computo_en_paralelo.html"))
+  } else if (modulo == "Modulo11"){
+    browseURL(file.path(dir, "Modulo11_Markdown_y_Leaflet.html"))
   } 
   
 } # end render_lectures
@@ -67,12 +91,12 @@ render_exercises <- function(ejercicio, resuelto = FALSE){
   dir <- file.path(dir, "doc")
   
   # Setting the lecture names
-  exercises <- paste0("Ejercicio_practico", c(1.1, 1.2, 2, 3))
+  exercises <- paste0("Ejercicio_practico", c(1.1, 1.2, 2, 3, 4))
   
   # Checking if the name corresponds to the existing lectures
   if(!ejercicio %in% exercises)
     stop("Por favor indique el nombre del ejercicio:
-          'Ejercicio_practico1.1', 'Ejercicio_practico1.2', 'Ejercicio_practico2', or 'Ejercicio_practico3'")
+          'Ejercicio_practico1.1', 'Ejercicio_practico1.2', 'Ejercicio_practico2', 'Ejercicio_practico3', or 'Ejercicio_practico4'")
   
   # Checking if the parameter resuelto is logical
   if(!is.logical(resuelto))
