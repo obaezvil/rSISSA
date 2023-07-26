@@ -8,7 +8,8 @@ render_exercises(ejercicio, resuelto = FALSE)
 }
 \arguments{
 \item{ejercicio}{caracter indicando cuál ejercicio visualizar:
-'Ejercicio_practico1.1', 'Ejercicio_practico1.2', 'Ejercicio_practico2', or 'Ejercicio_practico3'}
+'Ejercicio_practico1.1', 'Ejercicio_practico1.2', 'Ejercicio_practico2', 
+'Ejercicio_practico3','Ejercicio_practico4' o 'Ejercicio_practico5'}
 
 \item{resuelto}{argumento lógico. Se debe visualizar la solución? FALSE por defecto}
 }

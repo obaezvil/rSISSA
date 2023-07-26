@@ -91,12 +91,12 @@ render_exercises <- function(ejercicio, resuelto = FALSE){
   dir <- file.path(dir, "doc")
   
   # Setting the lecture names
-  exercises <- paste0("Ejercicio_practico", c(1.1, 1.2, 2, 3, 4))
+  exercises <- paste0("Ejercicio_practico", c(1.1, 1.2, 2, 3, 4, 5))
   
   # Checking if the name corresponds to the existing lectures
   if(!ejercicio %in% exercises)
     stop("Por favor indique el nombre del ejercicio:
-          'Ejercicio_practico1.1', 'Ejercicio_practico1.2', 'Ejercicio_practico2', 'Ejercicio_practico3', or 'Ejercicio_practico4'")
+          'Ejercicio_practico1.1', 'Ejercicio_practico1.2', 'Ejercicio_practico2', 'Ejercicio_practico3', 'Ejercicio_practico4',  o 'Ejercicio_practico5'")
   
   # Checking if the parameter resuelto is logical
   if(!is.logical(resuelto))
