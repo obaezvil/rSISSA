@@ -12,8 +12,10 @@
 #'   \item{'Modulo7': }{Introducción a machine learning - I}
 #'   \item{'Modulo8': }{Introducción a machine learning - II}
 #'   \item{'Modulo9': }{Fusión de productos de precipitación}
-#'   \item{'Modulo10': }{Funciones y cómputo en paralelo}
-#'   \item{'Modulo11': }{Trabajando con RMarkdown y Leaflet}
+#'   \item{'Modulo10': }{Funciones}
+#'   \item{'Modulo11': }{Cómputo en paralelo}
+#'   \item{'Modulo12': }{Trabajando con RMarkdown y Leaflet}
+#'   \item{'Modulo13': }{Descarga Automática de Datos}
 #'}
 #'
 #' @return esta función lleva al usiario al módulo seleccionado.
@@ -27,7 +29,7 @@ render_lectures <- function(modulo){
   dir <- file.path(dir, "doc")
   
   # Setting the lecture names
-  lectures <- c("Intro", paste0("Modulo", 1:11))
+  lectures <- c("Intro", paste0("Modulo", 1:13))
   
   # Checking if the name corresponds to the existing lectures
   if(!modulo %in% lectures)
@@ -42,8 +44,10 @@ render_lectures <- function(modulo){
           'Modulo7': Introducción a machine learning - I
           'Modulo8': Introducción a machine learning - II
           'Modulo9': Fusión de productos de precipitación
-          'Modulo10': Funciones y cómputo en paralelo
-          'Modulo11': Trabajando con RMarkdown y Leaflet")
+          'Modulo10': Funciones
+          'Modulo11': Cómputo en paralelo
+          'Modulo12': Trabajando con RMarkdown y Leaflet
+          'Modulo13': Descarga Automática de Datos")
   
   if(modulo == "Intro"){
     browseURL(file.path(dir, "Modulo0_Introduccion.html"))
@@ -66,9 +70,13 @@ render_lectures <- function(modulo){
   } else if (modulo == "Modulo9"){
     browseURL(file.path(dir, "Modulo9_Fusion_de_Productos_de_Precipitacion.html"))
   } else if (modulo == "Modulo10"){
-    browseURL(file.path(dir, "Modulo10_Funciones_y_Computo_en_paralelo.html"))
+    browseURL(file.path(dir, "Modulo10_Funciones.html"))
   } else if (modulo == "Modulo11"){
-    browseURL(file.path(dir, "Modulo11_Markdown_y_Leaflet.html"))
+    browseURL(file.path(dir, "Modulo11_Computo_en_paralelo.html"))
+  } else if (modulo == "Modulo12"){
+    browseURL(file.path(dir, "Modulo12_Markdown_y_Leaflet.html"))
+  } else if (modulo == "Modulo13"){
+    browseURL(file.path(dir, "Modulo13_Descarga_Productos.html"))
   } 
   
 } # end render_lectures

@@ -13,7 +13,15 @@ render_lectures(modulo)
 'Modulo2': Introducción a R - Parte 2
 'Modulo3': Rásters y datos espaciales
 'Modulo4': Procesamiento de datos
-'Modulo5': Estadísticas espaciales y temporales}
+'Modulo5' : Estadísticas espaciales y temporales
+'Modulo6': Evaluación de productos de precipitación
+'Modulo7': Introducción a machine learning - I
+'Modulo8': Introducción a machine learning - II
+'Modulo9': Fusión de productos de precipitación
+'Modulo10': Funciones
+'Modulo11': Cómputo en paralelo
+'Modulo12': Trabajando con RMarkdown y Leaflet
+'Modulo13': Descarga Automática de Datos"}
 }
 \value{
 esta función lleva al usiario al módulo seleccionado.
